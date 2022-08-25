@@ -1,0 +1,13 @@
+To implement this project we use basic concept of python, tkinter, pytube library.
+
+Tkinter is a standard GUI library and it is one of the easiest ways to build a GUI application.
+
+pytube used for downloading videos from youtube
+
+###### Installation of python libaries ######3
+open cmd and check for latest version of python
+To install the required modules run pip installer command on the command line:
+1.py
+2.py get pip.py
+3.pip install tkinter
+4.Pip install pytube
