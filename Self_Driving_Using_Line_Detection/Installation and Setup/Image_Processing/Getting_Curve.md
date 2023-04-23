@@ -4,10 +4,11 @@ First we will create a getLaneCurve function and then apply some thresholding to
 ```
 def getLaneCurve(img):
     imgThres = utlis.thresholding(img)
-    ```
+ ```
     
 ## STEP 1 – Thresholding
 Now the idea here is to get the path using either Color or Edge Detection. In our case we are using regular A4 White paper as path, therefore we can simply use the color detection to find the path. We will write the Thresholding function in the Utilities file.
+
 ```
 def thresholding(img):
     hsv = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
@@ -15,10 +16,12 @@ def thresholding(img):
     upperWhite = np.array([179, 160, 255])
     maskedWhite= cv2.inRange(hsv,lowerWhite,upperWhite)
     return maskedWhite
-    ```
+ ```
+    
 Here we are simply converting our image to HSV color space and then applying a range of color to find. This color could be found using the color picker script below.
 
-##Color Picker Script
+## Color Picker Script
+
 ```
 import cv2
 import numpy as np
