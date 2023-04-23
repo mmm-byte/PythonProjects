@@ -1,2 +1,0 @@
-
-We're going to use a Raspberry Pi to construct a self-driving vehicle in this project that can recognise lanes. We will first quickly review the hardware aspect before writing the code in depth and writing it step by step. Instead of using a raspberry pi, we will develop the code on a desktop computer, then add it to the pi. This means that even if the Car isn't ready, you may still follow along to learn lane detection.
