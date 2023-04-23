@@ -41,4 +41,7 @@ if __name__ == '__main__':
         getLaneCurve(img)
         cv2.waitKey(1)
    ```
-   For More [Image Processing](https://github.com/mmm-byte/PythonProjects/tree/main/Self_Driving_Using_Line_Detection/Installation%20and%20Setup/Image_Processing)
+   For More details about [Image Processing](https://github.com/mmm-byte/PythonProjects/tree/main/Self_Driving_Using_Line_Detection/Installation%20and%20Setup/Image_Processing)
+   
+   
+For More details about [Neural Network]()
