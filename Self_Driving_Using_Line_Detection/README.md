@@ -41,7 +41,45 @@ if __name__ == '__main__':
         getLaneCurve(img)
         cv2.waitKey(1)
    ```
+
+**Color Picking for Lane Detection**
+Using color picking for lane detection involves selecting specific colors that represent lane lines and using those colors to create a mask. This approach is particularly useful for detecting lane lines that are consistently colored, such as white or yellow lines on a road.
+
+In our project, we'll use color picking to create a binary mask that highlights the lane lines based on their color. Here's a detailed explanation and implementation of this technique.
+
+***Steps for Color Picking***
+***Color Space Conversion:*** Convert the image from the BGR color space to the HSV color space. The HSV color space is preferred for color picking because it separates the image intensity (brightness) from the color information, making it easier to select specific colors.
+
+***Define Color Range:*** Determine the range of HSV values that correspond to the colors of the lane lines. This range will be used to create a mask that highlights the lane lines.
+
+***Apply Mask:*** Create a binary mask where the pixels within the specified color range are set to white (255) and all other pixels are set to black (0). This mask will isolate the lane lines from the rest of the image.
+
+**Perspective Warping**
+
+Perspective warping, also known as perspective transformation, is a technique used in image processing to transform the perspective of an image as if viewed from a different angle. In the context of self-driving cars, perspective warping is crucial for lane detection. It transforms the image from a camera's perspective to a bird's-eye view, making it easier to analyze the road and lane markings.
+
+***Why Perspective Warping is Important***
+***Lane Detection:*** A bird's-eye view simplifies the task of detecting lanes by removing the perspective distortion caused by the camera angle.
+***Path Planning:*** It helps in better understanding the vehicle's position relative to the lanes, which is essential for path planning and navigation.
+***Object Detection:*** Objects on the road, such as obstacles or other vehicles, can be detected and tracked more accurately.
+
+**Motor Control**
+Motor control in the context of a self-driving car project involves managing the speed and direction of the car's motors based on the detected lane lines and the desired trajectory. This is a crucial component as it translates the lane detection and path planning outputs into actual movement of the vehicle.
+
+***Components of Motor Control***
+Hardware Interface: Typically involves a microcontroller or a single-board computer (like a Raspberry Pi) connected to motor drivers and motors.
+Motor Drivers: Electronic devices that take low-power control signals and translate them into higher-power signals to drive the motors.
+Control Algorithms: Software routines that determine the appropriate motor commands based on sensor inputs and lane detection results.
+Basic Concepts
+Speed Control: Adjusting the motor speed to control how fast the car moves.
+Direction Control: Adjusting the motor direction to control the steering of the car.
+PID Control: A control loop mechanism employing proportional, integral, and derivative (PID) control to maintain a desired path.
+
+
    For More details about [Image Processing](https://github.com/mmm-byte/PythonProjects/tree/main/Self_Driving_Using_Line_Detection/Installation%20and%20Setup/Image_Processing)
    
    
 For More details about [Neural Network](https://github.com/mmm-byte/PythonProjects/blob/main/Self_Driving_Using_Line_Detection/Installation%20and%20Setup/Neural_Network.md)
+
+**Conclusion**
+By following the steps above, you will be able to construct a self-driving car using lane detection with a Raspberry Pi. Each module is designed to handle specific tasks, making the system modular and easier to debug. The main script coordinates these modules, ensuring smooth operation. For more details on specific components like image processing and neural networks, refer to the linked documentation.
