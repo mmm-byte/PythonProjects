@@ -42,7 +42,7 @@ if __name__ == '__main__':
         cv2.waitKey(1)
    ```
 
-**Color Picking for Lane Detection**
+## Color Picking for Lane Detection
 Using color picking for lane detection involves selecting specific colors that represent lane lines and using those colors to create a mask. This approach is particularly useful for detecting lane lines that are consistently colored, such as white or yellow lines on a road.
 
 In our project, we'll use color picking to create a binary mask that highlights the lane lines based on their color. Here's a detailed explanation and implementation of this technique.
@@ -54,19 +54,23 @@ In our project, we'll use color picking to create a binary mask that highlights 
 
 ***Apply Mask:*** Create a binary mask where the pixels within the specified color range are set to white (255) and all other pixels are set to black (0). This mask will isolate the lane lines from the rest of the image.
 
-**Perspective Warping**
+## Perspective Warping
 
 Perspective warping, also known as perspective transformation, is a technique used in image processing to transform the perspective of an image as if viewed from a different angle. In the context of self-driving cars, perspective warping is crucial for lane detection. It transforms the image from a camera's perspective to a bird's-eye view, making it easier to analyze the road and lane markings.
 
 ***Why Perspective Warping is Important***
+
 ***Lane Detection:*** A bird's-eye view simplifies the task of detecting lanes by removing the perspective distortion caused by the camera angle.
+
 ***Path Planning:*** It helps in better understanding the vehicle's position relative to the lanes, which is essential for path planning and navigation.
+
 ***Object Detection:*** Objects on the road, such as obstacles or other vehicles, can be detected and tracked more accurately.
 
-**Motor Control**
+## Motor Control
 Motor control in the context of a self-driving car project involves managing the speed and direction of the car's motors based on the detected lane lines and the desired trajectory. This is a crucial component as it translates the lane detection and path planning outputs into actual movement of the vehicle.
 
 ***Components of Motor Control***
+
 Hardware Interface: Typically involves a microcontroller or a single-board computer (like a Raspberry Pi) connected to motor drivers and motors.
 Motor Drivers: Electronic devices that take low-power control signals and translate them into higher-power signals to drive the motors.
 Control Algorithms: Software routines that determine the appropriate motor commands based on sensor inputs and lane detection results.
